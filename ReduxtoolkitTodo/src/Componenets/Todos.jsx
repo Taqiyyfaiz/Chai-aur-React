@@ -3,7 +3,6 @@ import React from "react";
 /* import useDispacth => if you use Dispatch bring reducer by importing from slice*/
 import { useSelector, useDispatch } from "react-redux";
 import { removeTodo } from "../Features/todo/ToDoSlice";
-import { use } from "react";
 /* how to bring todos */
 /* useSelector is a method, Advantage of using in this method you can acces the state */
 const todos = useSelector((state) => state.todos);
