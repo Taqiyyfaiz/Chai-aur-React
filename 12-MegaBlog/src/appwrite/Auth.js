@@ -43,6 +43,24 @@ export class AuthService { // Create a class called AuthService
             throw error;
         }
     }
+
+    // Method to Check weather the Current User is Logedin
+    async getCurrentUser() {
+        try {
+            return await this.account.get();
+        } catch (error) {
+            console.log("Appwrite service ::  getCurrentUser :: error", error);
+        }
+    }
+
+    // Method to logout a user
+    async logout() {
+        try {
+            await this.account.deleteSessions()
+        } catch (error) {
+            console.log("Appwrite service ::  Logout :: error", error); 
+        }
+    }
 }
 
 const authService = new AuthService();
