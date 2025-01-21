@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "npm audit fix --force",
+			"command": "npm",
+			"args": [
+				"audit",
+				"fix",
+				"--force"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/12-MegaBlog"
+			},
+			"presentation": {
+				"reveal": "silent"
+			}
+		}
+	]
+}
