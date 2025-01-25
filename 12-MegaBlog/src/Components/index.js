@@ -13,11 +13,26 @@ import Logo from './Logo/Logo';
 // Import the LogoutBtn component from the Header directory
 import LogoutBtn from "./Header/LogoutBtn";
 
+// Import the RTE component from the RTE directory
+import RTE from "./RTE";
+
+import SignUp from "./SignUp";
+import { login } from "./Login";
+import Post from './Post'
+import PostForm from "./Post form/PostForm";
+import PostCard from "./PostCard";
+
 // Export all the imported components so they can be used in other parts of the application
 export {
     Header,
     Footer,
     Container,
     Logo,
-    LogoutBtn
+    LogoutBtn,
+    RTE,
+    SignUp,
+    login,
+    Post,
+    PostForm,
+    PostCard
 }

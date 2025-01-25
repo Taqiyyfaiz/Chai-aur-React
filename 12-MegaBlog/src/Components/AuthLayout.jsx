@@ -28,6 +28,7 @@ export default function Protected({ children, authentication = true }) {
         // } else if(authStatus === false) {
         //     navigate("/login")
         // }
+        
         // If authentication is required and the user is not authenticated, navigate to the login page
         if (authentication && authStatus !== authentication) {
             navigate("/login")
