@@ -6,7 +6,7 @@ import appwriteService from '../appwrite/Config'
 import { Container, PostCard } from '../Components'
 
 // Define the AllPost functional component
-function AllPost() {
+function AllPosts() {
     // Define state for posts using useState hook
     const [posts, setPosts] = useState([])
 
@@ -38,4 +38,4 @@ function AllPost() {
 }
 
 // Export the AllPost component as the default export
-export default AllPost
+export default AllPosts

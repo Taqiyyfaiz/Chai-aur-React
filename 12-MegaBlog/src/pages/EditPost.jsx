@@ -10,7 +10,7 @@ import { useParams, useNavigate } from "react-router-dom"
 // Define the EditPost functional component
 function EditPost() {
     // Define state for the post using useState hook
-    const [post, setPost] = useState(null)
+    const [post, setPosts] = useState(null)
     // Get the slug parameter from the URL using useParams hook
     const { slug } = useParams()
     // Get the navigate function from useNavigate hook
@@ -24,7 +24,7 @@ function EditPost() {
             .then((post) => {
                 if (post) {
                     // Set the post data if found
-                    setPost(post)
+                    setPosts(post)
                 }
             })
         } else {
