@@ -5,19 +5,19 @@ import React from 'react'
 import { Container, Logo, LogoutBtn } from '../index'
 
 // Import Link component from react-router-dom for navigation
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 // Import useSelector hook from react-redux to access the Redux store state
 import { useSelector } from 'react-redux'
-
-// Import useNavigate hook from react-router-dom for navigation
-import { useNavigate } from 'react-router-dom'
 
 // Define the Header functional component
 function Header() {
   // Get the authentication status from the Redux store
   const authStatus = useSelector((state) => state.auth.status)
-  
+
+  // Hook for navigation
+  const navigate = useNavigate()
+
   // Define the navigation items with their names, slugs, and active status based on authentication
   const navItems = [
     {
@@ -62,7 +62,7 @@ function Header() {
               item.active ? (
                 <li key={item.name}>
                   <button
-                    onClick={() => useNavigate()(item.slug)} // Navigate to the item's slug when clicked
+                    onClick={() => navigate(item.slug)} // Correct use of useNavigate
                     className='inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
                   >
                     {item.name}

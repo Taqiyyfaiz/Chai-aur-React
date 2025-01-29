@@ -22,7 +22,7 @@ export class Service {
         try {
             // Attempt to create a document in the database with the provided data
             return await this.databases.createDocument(
-                conf.appwriteDatabaseId, // Database ID from configuration
+                conf.appwriteDataBaseId, // Database ID from configuration
                 conf.appwriteCollectionId, // Collection ID from configuration
                 slug, // Document ID (slug)
                 {
@@ -44,7 +44,7 @@ export class Service {
         try {
             // Attempt to update a document in the database with the provided data
             return await this.databases.updateDocument(
-                conf.appwriteDatabaseId, // Database ID from configuration
+                conf.appwriteDataBaseId, // Database ID from configuration
                 conf.appwriteCollectionId, // Collection ID from configuration
                 slug, // Document ID (slug)
                 {
@@ -65,7 +65,7 @@ export class Service {
         try {
             // Attempt to delete a document from the database using the provided slug
             await this.databases.deleteDocument(
-                conf.appwriteDatabaseId, // Database ID from configuration
+                conf.appwriteDataBaseId, // Database ID from configuration
                 conf.appwriteCollectionId, // Collection ID from configuration
                 slug // Document ID (slug)
             );
@@ -82,7 +82,7 @@ export class Service {
         try {
             // Attempt to get a document from the database using the provided slug
             return await this.databases.getDocument(
-                conf.appwriteDatabaseId, // Database ID from configuration
+                conf.appwriteDataBaseId, // Database ID from configuration
                 conf.appwriteCollectionId, // Collection ID from configuration
                 slug // Document ID (slug)
             );
@@ -98,7 +98,7 @@ export class Service {
         try {
             // Attempt to list documents from the database using the provided queries
             return await this.databases.listDocuments(
-                conf.appwriteDatabaseId, // Database ID from configuration
+                conf.appwriteDataBaseId, // Database ID from configuration
                 conf.appwriteCollectionId, // Collection ID from configuration
                 queries // Queries to filter the documents
             );
