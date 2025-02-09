@@ -5,7 +5,7 @@ const conf = {
     // Set the Appwrite project ID from environment variables
     appwriteProjectId: String(import.meta.env.VITE_APPWRITE_PROJECT_ID),
     // Set the Appwrite database ID from environment variables
-    appwriteDataBaseId: String(import.meta.env.VITE_APP_DATABASE_ID),
+    appwriteDatabaseId: String(import.meta.env.VITE_APP_DATABASE_ID),
     // Set the Appwrite collection ID from environment variables
     appwriteCollectionId: String(import.meta.env.VITE_APP_COLLECTION_ID),
     // Set the Appwrite bucket ID from environment variables
